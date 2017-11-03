@@ -11,7 +11,7 @@ CERT="${CERTS}/tls.crt"
 PKEY="${CERTS}/tls.key"
 
 # TODO: move files to Remote Monitoring repositories
-REPOSITORY="https://raw.githubusercontent.com/Azure/pcs-cli/limliu/remotemonitoring/single-vm/setup.sh"
+REPOSITORY="https://raw.githubusercontent.com/Azure/pcs-cli/limliu/remotemonitoring/single-vm"
 SCRIPTS_URL="${REPOSITORY}/scripts/"
 
 # ========================================================================
@@ -106,7 +106,7 @@ wget $SCRIPTS_URL/stop.sh     -O /app/stop.sh     && chmod 750 /app/stop.sh
 touch ${WEBUICONFIG} && chmod 444 ${WEBUICONFIG}
 touch ${WEBUICONFIG_SAFE} && chmod 444 ${WEBUICONFIG_SAFE}
 touch ${WEBUICONFIG_UNSAFE} && chmod 444 ${WEBUICONFIG_UNSAFE}
-
+ 
 echo "var DeploymentConfig = {"                       >> ${WEBUICONFIG_SAFE}
 echo "  authEnabled: true,"                           >> ${WEBUICONFIG_SAFE}
 echo "  authType: '${PCS_WEBUI_AUTH_TYPE}',"          >> ${WEBUICONFIG_SAFE}
