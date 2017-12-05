@@ -39,7 +39,7 @@ services:
       - APPLICATION_SECRET
 
   iothubmanager:
-    image: azureiotpcs/iothub-manager-java:testing
+    image: zhanghua/iothub-manager-java:testing
     environment:
       - PCS_IOTHUB_CONNSTRING
       # TODO: the dependency on config is temporary
@@ -83,7 +83,7 @@ services:
       - APPLICATION_SECRET
 
   config:
-    image: azureiotpcs/pcs-config-java:testing
+    image: zhanghua/pcs-config-java:testing
     depends_on:
       - storageadapter
       - devicesimulation

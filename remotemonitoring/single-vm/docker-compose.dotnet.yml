@@ -37,7 +37,7 @@ services:
       - PCS_APPLICATION_SECRET
 
   iothubmanager:
-    image: azureiotpcs/iothub-manager-dotnet:testing
+    image: zhanghua/iothub-manager-dotnet:testing
     environment:
       - PCS_IOTHUB_CONNSTRING
       # TODO: the dependency on config is temporary
