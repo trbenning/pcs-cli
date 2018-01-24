@@ -24,9 +24,9 @@
                 "ConsistentPrefix",
                 "Eventual"
             ],
-            "defaultValue": "Strong",
+            "defaultValue": "Session",
             "metadata": {
-                "description": "The documentDB deault consistency level for this account."
+                "description": "The documentDB default consistency level for this account."
             }
         },
         "docDBMaxStalenessPrefix": {
